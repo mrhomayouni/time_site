@@ -1,7 +1,10 @@
 <?php
 require "load.php";
+
 auth_require();
+
 $projects = get_project();
+
 if (isset($_GET["sendproject"])) {
     $chekproject = chek_project($_GET["project"]);
     $products = get_product($_GET["project"]);
